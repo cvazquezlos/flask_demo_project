@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 from pickle import load
 
 app = Flask(__name__)
-with open("/workspaces/flask_demo_project/models/logistic_default.sav", 'rb') as f:
+with open("../models/logistic_default.sav", 'rb') as f:
     model = load(f)
 
 @app.route("/", methods = ["GET", "POST"])
